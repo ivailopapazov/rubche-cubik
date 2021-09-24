@@ -1,17 +1,24 @@
 <main>
-  <h1>Browser</h1>
-
+  <h1>
+    {{#if title}}
+      {{title}}
+    {{else}}
+      BROWSER
+    {{/if}}
+  </h1>
   <form action="/search" method="GET">
-    <input type="text" class="search" name="search" placeholder="Search...">
-    <input type="number" name="from" class="difficulty" placeholder="Difficulty from...">
+    <input type="text" class="search" name="search" placeholder="Search..." value="{{search}}">
+    <input type="number" name="from" class="difficulty" placeholder="Difficulty from..." value={{from}}>
     <span>-</span>
-    <input type="number" name="to" class="difficulty" placeholder="Difficulty to...">
+    <input type="number" name="to" class="difficulty" placeholder="Difficulty to..." value={{to}}>
     <input type="submit" value="search">
   </form>
 
   <div class="cubes">
     {{#each cubes}}
       {{> cube}}
+    {{else}}
+      <p>No results to show</p>
     {{/each}}
   </div>
 
