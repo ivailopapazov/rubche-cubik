@@ -15,6 +15,13 @@ class Cube {
             description: 'Some really old singer',
             imageUrl: 'https://api.time.com/wp-content/uploads/2015/08/ice-cube-straight-outta-compton1.jpg?quality=85&w=1200&h=628&crop=1',
             difficulty: '1'
+        },
+        {
+            id: 'oamrnodgktynnv4x',
+            name: 'Cute',
+            description: 'Owl Cube',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6luFSET8vD7sbUcPusrFzblRSty_u46DafQ&usqp=CAU',
+            difficulty: '2'
         }
     ];
 
@@ -24,6 +31,7 @@ class Cube {
         this.description = description;
         this.imageUrl = imageUrl;
         this.difficulty = difficulty;
+        // this.canonicalUrl = name.replace(/ /g, '-').toLowerCase()
     }
 
     static get cubes() {
