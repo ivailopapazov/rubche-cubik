@@ -4,6 +4,7 @@
   "description": "Educational express app",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/ivailopapazov/rubche-cubik/issues"
   },
-  "homepage": "https://github.com/ivailopapazov/rubche-cubik#readme"
+  "homepage": "https://github.com/ivailopapazov/rubche-cubik#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  }
 }
