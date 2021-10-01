@@ -8,9 +8,14 @@ async function getAll() {
     return Accessory.find({}).lean();
 }
 
+async function getAllWithout(accessoryIds) {
+    return Accessory.find({_id: {$nin: accessoryIds }}).lean();
+}
+
 const accessoryService = {
     getAll,
     create,
+    getAllWithout,
 };
 
 module.exports = accessoryService;
