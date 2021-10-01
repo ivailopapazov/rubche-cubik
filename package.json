@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=development&& nodemon ./src/index.js",
+    "prod": "set NODE_ENV=production&& node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
