@@ -1,5 +1,6 @@
 const express = require('express');
 const cubeService = require('../services/cubeService');
+const Cube = require('../models/Cube');
 
 const router = express.Router();
 

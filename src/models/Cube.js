@@ -39,6 +39,11 @@ const cubeSchema = new mongoose.Schema({
 //     return /^https?:\/\//i.test(value)
 // });
 
+// Not used only for demo
+cubeSchema.statics.findByName = function(name) {
+    return this.find({name});
+};
+
 const Cube = mongoose.model('Cube', cubeSchema);
 
 module.exports = Cube;
