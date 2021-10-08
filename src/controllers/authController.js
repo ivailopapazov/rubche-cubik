@@ -16,11 +16,15 @@ router.get('/register', (req, res) => {
 });
 
 router.post('/register', async (req, res) => {
-    let { username, password, repeatPassword } = req.body;
+    try {
+        let { username, password, repeatPassword } = req.body;
 
-    await authService.register(username, password, repeatPassword)
+        await authService.register(username, password, repeatPassword)
 
-    res.redirect('/login');
+        res.redirect('/login');
+    } catch (error) {
+        res.status(400).send(error);
+    }
 });
 
 module.exports = router;
