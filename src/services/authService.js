@@ -25,13 +25,37 @@ exports.login = function (username, password) {
         .catch(() => null);
 }
 
-exports.createToken = function(user) {
-    console.log(user);
+// exports.createToken = function(user, onTokenCreate) {
+//     let payload = {
+//         _id: user._id,
+//         username: user.username,
+//     }
+    
+//     jwt.sign(payload, SECRET, function(err, token) {
+//         if (err) {
+//            return onTokenCreate(err);
+//         }
 
+//         onTokenCreate(null, token);
+//     });
+// };
+
+exports.createToken = function(user) {
     let payload = {
         _id: user._id,
         username: user.username,
     }
-    
+
     return jwtSign(payload, SECRET);
+
+    // return new Promise((resolve, reject) => {
+    //     jwt.sign(payload, SECRET, function(err, token) {
+    //         if (err) {
+    //             reject(err);
+    //         } else {
+    //             resolve(token);
+    //         }
+    //     })
+    // });
 };
+
