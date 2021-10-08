@@ -30,7 +30,11 @@ const getEditCubePage = (req, res) => {
 };
 
 const getDeleteCubePage = (req, res) => {
-    res.render('cube/delete');  
+    if (!req.user) {
+        return res.status(401).redirect('/404');
+    }
+    
+    res.render('cube/delete');
 };
 
 router.get('/create', getCreateCubePage);
