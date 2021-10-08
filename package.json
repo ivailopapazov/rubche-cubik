@@ -23,6 +23,7 @@
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.8"
   },
   "devDependencies": {
