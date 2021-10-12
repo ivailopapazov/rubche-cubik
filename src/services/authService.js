@@ -9,7 +9,7 @@ exports.register = function (username, password, repeatPassword) {
     // return bcrypt.hash(password, 10)
     //     .then(hash => User.create({ username, password: hash }))
 
-    return User.create({ username, password });
+    return User.create({ username, password, repeatPassword });
 };
 
 exports.login = function (username, password) {
